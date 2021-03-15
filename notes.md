@@ -23,9 +23,10 @@ In our analysis, we empirically determined that **t min = 90ms and d max = 45pix
 - 
 
 ### Important terms & notes
-
+- Purkinje images (eye structure image)
+    - ![Four reflections of purkinje image](./docs/purkinjereflection.svg)
 - CR (Cornea Reflection)
-- saccadic movement
+- saccadic movement (point-to-point movement within short period, avg 200-480ms)
 - [medotics AG eye tracking](http://medotics.com/metsio.php)
 
 ### Challenges
@@ -38,3 +39,8 @@ In our analysis, we empirically determined that **t min = 90ms and d max = 45pix
 - eye-tracking program
 - GUI
 - eye-movement (reading quality) analysis, with charts and graph
+
+### Algo
+
+1. track face-eye position on screen and calibrate eye movement with screen dimension
+2. 
