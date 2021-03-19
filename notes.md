@@ -44,3 +44,9 @@ In our analysis, we empirically determined that **t min = 90ms and d max = 45pix
 
 1. track face-eye position on screen and calibrate eye movement with screen dimension
 2. 
+
+### OpenCV
+
+#### functions
+- cv.CascadeClassifier.detectMultiScale
+  - 

@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/media/leon/4442AE2F42AE25A022/LEONLAH/my_projects/dyslexia-eyetracking/src/track-alpha.cpp
+iostream
+-
+vector
+-
+opencv4/opencv2/highgui/highgui.hpp
+-
+opencv4/opencv2/imgproc/imgproc.hpp
+-
+opencv4/opencv2/objdetect/objdetect.hpp
+-
+
