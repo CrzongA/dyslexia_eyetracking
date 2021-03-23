@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/media/leon/4442AE2F42AE25A022/LEONLAH/my_projects/dyslexia-eyetracking/src/track-alpha.cpp
+/media/leon/4442AE2F42AE25A022/LEONLAH/myprojects/dyslexia-eyetracking/src/track-alpha.cpp
 iostream
 -
 vector

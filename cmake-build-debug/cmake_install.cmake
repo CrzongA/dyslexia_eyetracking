@@ -1,4 +1,4 @@
-# Install script for directory: /media/leon/4442AE2F42AE25A022/LEONLAH/my_projects/dyslexia-eyetracking
+# Install script for directory: /media/leon/4442AE2F42AE25A022/LEONLAH/myprojects/dyslexia-eyetracking
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/media/leon/4442AE2F42AE25A022/LEONLAH/my_projects/dyslexia-eyetracking/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/media/leon/4442AE2F42AE25A022/LEONLAH/myprojects/dyslexia-eyetracking/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

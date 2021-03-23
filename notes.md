@@ -28,6 +28,10 @@ In our analysis, we empirically determined that **t min = 90ms and d max = 45pix
 - CR (Cornea Reflection)
 - saccadic movement (point-to-point movement within short period, avg 200-480ms)
 - [medotics AG eye tracking](http://medotics.com/metsio.php)
+- Gaze detection
+    - Pupil labs
+    - Tobii eye tracker
+    - NVGaze
 
 ### Challenges
 
@@ -42,8 +46,11 @@ In our analysis, we empirically determined that **t min = 90ms and d max = 45pix
 
 ### Algo
 
-1. track face-eye position on screen and calibrate eye movement with screen dimension
-2. 
+1. track face-eye position on screen 
+    - Haar Cascade for detecting eye location on camera
+        - need to train my own? prebuilt in opencv not stable
+2. calibrate eye movement with screen dimension
+    - grayscale thresholding to find pupil
 
 ### OpenCV
 

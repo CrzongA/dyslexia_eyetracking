@@ -1,4 +1,4 @@
-/home/leon/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/203.6682.181/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /media/leon/4442AE2F42AE25A022/LEONLAH/my_projects/dyslexia-eyetracking
+/home/leon/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/203.6682.181/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /media/leon/4442AE2F42AE25A022/LEONLAH/myprojects/dyslexia-eyetracking
 -- The C compiler identification is GNU 9.3.0
 -- The CXX compiler identification is GNU 9.3.0
 -- Check for working C compiler: /usr/bin/cc
@@ -16,4 +16,4 @@
 -- Found OpenCV: /usr/local (found version "4.5.1") 
 -- Configuring done
 -- Generating done
--- Build files have been written to: /media/leon/4442AE2F42AE25A022/LEONLAH/my_projects/dyslexia-eyetracking/cmake-build-debug
+-- Build files have been written to: /media/leon/4442AE2F42AE25A022/LEONLAH/myprojects/dyslexia-eyetracking/cmake-build-debug
