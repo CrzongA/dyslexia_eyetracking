@@ -22,6 +22,10 @@ at least $t _{min}$ .
 In our analysis, we empirically determined that **t min = 90ms and d max = 45pixels, corresponding to 1.5$^\text{o}$**, work well for identifying fixations across all participants"
 - 
 
+### Resources & Open Source Repos
+- [openeyetracker](https://open-neuroscience.com/post/openeyetrack_an_open_source_high_speed_eyetracker/)
+- [PyGaze](http://www.pygaze.org/)
+
 ### Important terms & notes
 - Purkinje images (eye structure image)
     - ![Four reflections of purkinje image](./docs/purkinjereflection.svg)
@@ -29,7 +33,7 @@ In our analysis, we empirically determined that **t min = 90ms and d max = 45pix
 - saccadic movement (point-to-point movement within short period, avg 200-480ms)
 - [medotics AG eye tracking](http://medotics.com/metsio.php)
 - Gaze detection
-    - Pupil labs
+    - [Pupil labs](http://www.pygaze.org/) cheapest option $2740 euro
     - Tobii eye tracker
     - NVGaze
 
