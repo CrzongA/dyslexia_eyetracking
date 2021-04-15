@@ -25,6 +25,7 @@ In our analysis, we empirically determined that **t min = 90ms and d max = 45pix
 ### Resources & Open Source Repos
 - [openeyetracker](https://open-neuroscience.com/post/openeyetrack_an_open_source_high_speed_eyetracker/)
 - [PyGaze](http://www.pygaze.org/)
+- [event-based gaze tracking](https://www.computationalimaging.org/publications/event-based-eye-tracking/) <em>Seems very good, worth trying</em>
 
 ### Important terms & notes
 - Purkinje images (eye structure image)
