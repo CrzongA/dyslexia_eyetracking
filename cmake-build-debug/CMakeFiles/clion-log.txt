@@ -1,19 +1,10 @@
-/home/leon/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/203.6682.181/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /media/leon/4442AE2F42AE25A022/LEONLAH/myprojects/dyslexia-eyetracking
--- The C compiler identification is GNU 9.3.0
--- The CXX compiler identification is GNU 9.3.0
--- Check for working C compiler: /usr/bin/cc
--- Check for working C compiler: /usr/bin/cc - works
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Detecting C compile features
--- Detecting C compile features - done
--- Check for working CXX compiler: /usr/bin/c++
--- Check for working CXX compiler: /usr/bin/c++ - works
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Detecting CXX compile features
--- Detecting CXX compile features - done
--- Found OpenCV: /usr/local (found version "4.5.1") 
+C:\Users\Leon\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\211.7142.21\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" F:\LEONLAH\myprojects\dyslexia-eyetracking
+-- OpenCV ARCH: x64
+-- OpenCV RUNTIME: mingw
+-- OpenCV STATIC: OFF
+-- Found OpenCV: C:/opencv (found version "4.5.2") 
+-- Found OpenCV 4.5.2 in C:/opencv/x64/mingw/lib
+-- You might need to add C:/opencv/x64/mingw/bin to your PATH to be able to run your applications.
 -- Configuring done
 -- Generating done
--- Build files have been written to: /media/leon/4442AE2F42AE25A022/LEONLAH/myprojects/dyslexia-eyetracking/cmake-build-debug
+-- Build files have been written to: F:/LEONLAH/myprojects/dyslexia-eyetracking/cmake-build-debug

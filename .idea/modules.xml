@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/dyslexia-eyetracking.iml" filepath="$PROJECT_DIR$/.idea/dyslexia-eyetracking.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/dyslexia-eyetracking2.iml" filepath="$PROJECT_DIR$/.idea/dyslexia-eyetracking2.iml" />
     </modules>
   </component>
 </project>

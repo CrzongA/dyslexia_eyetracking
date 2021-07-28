@@ -20,12 +20,19 @@ we have a ***pupil and CR detection*** we measure the length and the angle of th
 ***duration of fixations***. To constitute a fixation, gaze points have to remain within a window of size $d _{max}$ for
 at least $t _{min}$ .
 In our analysis, we empirically determined that **t min = 90ms and d max = 45pixels, corresponding to 1.5$^\text{o}$**, work well for identifying fixations across all participants"
-- 
+- Dlib: face landmark library
 
 ### Resources & Open Source Repos
+- [open pupils lab](https://pupil-labs.com/products/core/) <em>This one's really useful</em> 
+    - https://docs.pupil-labs.com/core/diy/#getting-all-the-parts
+    - https://www.shapeways.com/shops/pupil_store
+- [optikey](https://github.com/OptiKey/OptiKey/wiki)
 - [openeyetracker](https://open-neuroscience.com/post/openeyetrack_an_open_source_high_speed_eyetracker/)
 - [PyGaze](http://www.pygaze.org/)
 - [event-based gaze tracking](https://www.computationalimaging.org/publications/event-based-eye-tracking/) <em>Seems very good, worth trying</em>
+
+### Good examples
+- https://hackaday.io/project/153293-low-cost-open-source-eye-tracking
 
 ### Important terms & notes
 - Purkinje images (eye structure image)
@@ -56,9 +63,10 @@ In our analysis, we empirically determined that **t min = 90ms and d max = 45pix
         - need to train my own? prebuilt in opencv not stable
 2. calibrate eye movement with screen dimension
     - grayscale thresholding to find pupil
+    - RANSAC homography
 
 ### OpenCV
 
 #### functions
-- cv.CascadeClassifier.detectMultiScale
-  - 
+- ```cv.CascadeClassifier.detectMultiScale```
+  - return detected object's coordinates given a cascade classifier

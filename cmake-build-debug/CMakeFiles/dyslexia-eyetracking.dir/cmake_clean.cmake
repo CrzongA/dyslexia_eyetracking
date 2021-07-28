@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/dyslexia-eyetracking.dir/src/track-alpha.cpp.o"
-  "dyslexia-eyetracking"
+  "CMakeFiles/dyslexia-eyetracking.dir/src/track-alpha.cpp.obj"
+  "dyslexia-eyetracking.exe"
+  "dyslexia-eyetracking.exe.manifest"
   "dyslexia-eyetracking.pdb"
+  "libdyslexia-eyetracking.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.
