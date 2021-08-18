@@ -5,13 +5,61 @@
 		<Option title="dyslexia-eyetracking"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\opencv\;CMake Files\opencv\x64\;CMake Files\opencv\x64\mingw\;CMake Files\opencv\x64\mingw\lib\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\boost\;CMake Files\boost\lib\;CMake Files\boost\lib\cmake\;CMake Files\boost\lib\cmake\Boost-1.76.0\;CMake Files\boost\lib\cmake\boost_headers-1.76.0\;CMake Files\opencv\;CMake Files\opencv\x64\;CMake Files\opencv\x64\mingw\;CMake Files\opencv\x64\mingw\lib\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="F:/LEONLAH/myprojects/dyslexia-eyetracking/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/LEONLAH/myprojects/dyslexia-eyetracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/LEONLAH/myprojects/dyslexia-eyetracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/LEONLAH/myprojects/dyslexia-eyetracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/LEONLAH/myprojects/dyslexia-eyetracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pupiltracker">
+				<Option output="F:/LEONLAH/myprojects/dyslexia-eyetracking/cmake-build-debug/libpupiltracker.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="F:/LEONLAH/myprojects/dyslexia-eyetracking/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/opencv/include"/>
+					<Add directory="C:/boost/include/boost-1_76"/>
+					<Add directory="F:/LEONLAH/myprojects/dyslexia-eyetracking/src/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/LEONLAH/myprojects/dyslexia-eyetracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 pupiltracker"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/LEONLAH/myprojects/dyslexia-eyetracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/LEONLAH/myprojects/dyslexia-eyetracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/LEONLAH/myprojects/dyslexia-eyetracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pupiltracker/fast">
+				<Option output="F:/LEONLAH/myprojects/dyslexia-eyetracking/cmake-build-debug/libpupiltracker.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="F:/LEONLAH/myprojects/dyslexia-eyetracking/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/opencv/include"/>
+					<Add directory="C:/boost/include/boost-1_76"/>
+					<Add directory="F:/LEONLAH/myprojects/dyslexia-eyetracking/src/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/LEONLAH/myprojects/dyslexia-eyetracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 pupiltracker/fast"/>
 					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/LEONLAH/myprojects/dyslexia-eyetracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/LEONLAH/myprojects/dyslexia-eyetracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/LEONLAH/myprojects/dyslexia-eyetracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -24,6 +72,8 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="C:/boost/include/boost-1_76"/>
+					<Add directory="F:/LEONLAH/myprojects/dyslexia-eyetracking/src/include"/>
 					<Add directory="C:/opencv/include"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
@@ -46,6 +96,8 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="C:/boost/include/boost-1_76"/>
+					<Add directory="F:/LEONLAH/myprojects/dyslexia-eyetracking/src/include"/>
 					<Add directory="C:/opencv/include"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
@@ -82,11 +134,32 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="F:/LEONLAH/myprojects/dyslexia-eyetracking/src/track-alpha.cpp">
+		<Unit filename="F:/LEONLAH/myprojects/dyslexia-eyetracking/src/lib/PupilTracker.cpp">
+			<Option target="pupiltracker"/>
+		</Unit>
+		<Unit filename="F:/LEONLAH/myprojects/dyslexia-eyetracking/src/lib/cvx.cpp">
+			<Option target="pupiltracker"/>
+		</Unit>
+		<Unit filename="F:/LEONLAH/myprojects/dyslexia-eyetracking/src/lib/utils.cpp">
+			<Option target="pupiltracker"/>
+		</Unit>
+		<Unit filename="F:/LEONLAH/myprojects/dyslexia-eyetracking/src/swirsky.cpp">
 			<Option target="dyslexia-eyetracking"/>
 		</Unit>
 		<Unit filename="F:/LEONLAH/myprojects/dyslexia-eyetracking/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="F:/LEONLAH/myprojects/dyslexia-eyetracking/boost/lib/cmake/Boost-1.76.0/BoostConfig.cmake">
+			<Option virtualFolder="CMake Files\boost\lib\cmake\Boost-1.76.0\"/>
+		</Unit>
+		<Unit filename="F:/LEONLAH/myprojects/dyslexia-eyetracking/boost/lib/cmake/Boost-1.76.0/BoostConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\boost\lib\cmake\Boost-1.76.0\"/>
+		</Unit>
+		<Unit filename="F:/LEONLAH/myprojects/dyslexia-eyetracking/boost/lib/cmake/boost_headers-1.76.0/boost_headers-config-version.cmake">
+			<Option virtualFolder="CMake Files\boost\lib\cmake\boost_headers-1.76.0\"/>
+		</Unit>
+		<Unit filename="F:/LEONLAH/myprojects/dyslexia-eyetracking/boost/lib/cmake/boost_headers-1.76.0/boost_headers-config.cmake">
+			<Option virtualFolder="CMake Files\boost\lib\cmake\boost_headers-1.76.0\"/>
 		</Unit>
 		<Unit filename="F:/LEONLAH/myprojects/dyslexia-eyetracking/opencv/OpenCVConfig-version.cmake">
 			<Option virtualFolder="CMake Files\opencv\"/>

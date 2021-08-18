@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/dyslexia-eyetracking.dir/src/track-alpha.cpp.obj"
+  "CMakeFiles/dyslexia-eyetracking.dir/src/swirsky.cpp.obj"
   "dyslexia-eyetracking.exe"
   "dyslexia-eyetracking.exe.manifest"
   "dyslexia-eyetracking.pdb"

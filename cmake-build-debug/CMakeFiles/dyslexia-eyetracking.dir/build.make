@@ -75,44 +75,44 @@ include CMakeFiles/dyslexia-eyetracking.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/dyslexia-eyetracking.dir/flags.make
 
-CMakeFiles/dyslexia-eyetracking.dir/src/track-alpha.cpp.obj: CMakeFiles/dyslexia-eyetracking.dir/flags.make
-CMakeFiles/dyslexia-eyetracking.dir/src/track-alpha.cpp.obj: CMakeFiles/dyslexia-eyetracking.dir/includes_CXX.rsp
-CMakeFiles/dyslexia-eyetracking.dir/src/track-alpha.cpp.obj: ../src/track-alpha.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\LEONLAH\myprojects\dyslexia-eyetracking\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/dyslexia-eyetracking.dir/src/track-alpha.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\dyslexia-eyetracking.dir\src\track-alpha.cpp.obj -c F:\LEONLAH\myprojects\dyslexia-eyetracking\src\track-alpha.cpp
+CMakeFiles/dyslexia-eyetracking.dir/src/swirsky.cpp.obj: CMakeFiles/dyslexia-eyetracking.dir/flags.make
+CMakeFiles/dyslexia-eyetracking.dir/src/swirsky.cpp.obj: CMakeFiles/dyslexia-eyetracking.dir/includes_CXX.rsp
+CMakeFiles/dyslexia-eyetracking.dir/src/swirsky.cpp.obj: ../src/swirsky.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\LEONLAH\myprojects\dyslexia-eyetracking\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/dyslexia-eyetracking.dir/src/swirsky.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\dyslexia-eyetracking.dir\src\swirsky.cpp.obj -c F:\LEONLAH\myprojects\dyslexia-eyetracking\src\swirsky.cpp
 
-CMakeFiles/dyslexia-eyetracking.dir/src/track-alpha.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dyslexia-eyetracking.dir/src/track-alpha.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E F:\LEONLAH\myprojects\dyslexia-eyetracking\src\track-alpha.cpp > CMakeFiles\dyslexia-eyetracking.dir\src\track-alpha.cpp.i
+CMakeFiles/dyslexia-eyetracking.dir/src/swirsky.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dyslexia-eyetracking.dir/src/swirsky.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E F:\LEONLAH\myprojects\dyslexia-eyetracking\src\swirsky.cpp > CMakeFiles\dyslexia-eyetracking.dir\src\swirsky.cpp.i
 
-CMakeFiles/dyslexia-eyetracking.dir/src/track-alpha.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dyslexia-eyetracking.dir/src/track-alpha.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\LEONLAH\myprojects\dyslexia-eyetracking\src\track-alpha.cpp -o CMakeFiles\dyslexia-eyetracking.dir\src\track-alpha.cpp.s
+CMakeFiles/dyslexia-eyetracking.dir/src/swirsky.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dyslexia-eyetracking.dir/src/swirsky.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\LEONLAH\myprojects\dyslexia-eyetracking\src\swirsky.cpp -o CMakeFiles\dyslexia-eyetracking.dir\src\swirsky.cpp.s
 
 # Object files for target dyslexia-eyetracking
 dyslexia__eyetracking_OBJECTS = \
-"CMakeFiles/dyslexia-eyetracking.dir/src/track-alpha.cpp.obj"
+"CMakeFiles/dyslexia-eyetracking.dir/src/swirsky.cpp.obj"
 
 # External object files for target dyslexia-eyetracking
 dyslexia__eyetracking_EXTERNAL_OBJECTS =
 
-dyslexia-eyetracking.exe: CMakeFiles/dyslexia-eyetracking.dir/src/track-alpha.cpp.obj
+dyslexia-eyetracking.exe: CMakeFiles/dyslexia-eyetracking.dir/src/swirsky.cpp.obj
 dyslexia-eyetracking.exe: CMakeFiles/dyslexia-eyetracking.dir/build.make
-dyslexia-eyetracking.exe: C:/opencv/x64/mingw/lib/libopencv_gapi452.dll.a
-dyslexia-eyetracking.exe: C:/opencv/x64/mingw/lib/libopencv_highgui452.dll.a
-dyslexia-eyetracking.exe: C:/opencv/x64/mingw/lib/libopencv_ml452.dll.a
-dyslexia-eyetracking.exe: C:/opencv/x64/mingw/lib/libopencv_objdetect452.dll.a
-dyslexia-eyetracking.exe: C:/opencv/x64/mingw/lib/libopencv_photo452.dll.a
-dyslexia-eyetracking.exe: C:/opencv/x64/mingw/lib/libopencv_stitching452.dll.a
-dyslexia-eyetracking.exe: C:/opencv/x64/mingw/lib/libopencv_video452.dll.a
-dyslexia-eyetracking.exe: C:/opencv/x64/mingw/lib/libopencv_videoio452.dll.a
-dyslexia-eyetracking.exe: C:/opencv/x64/mingw/lib/libopencv_dnn452.dll.a
-dyslexia-eyetracking.exe: C:/opencv/x64/mingw/lib/libopencv_imgcodecs452.dll.a
-dyslexia-eyetracking.exe: C:/opencv/x64/mingw/lib/libopencv_calib3d452.dll.a
-dyslexia-eyetracking.exe: C:/opencv/x64/mingw/lib/libopencv_features2d452.dll.a
-dyslexia-eyetracking.exe: C:/opencv/x64/mingw/lib/libopencv_flann452.dll.a
-dyslexia-eyetracking.exe: C:/opencv/x64/mingw/lib/libopencv_imgproc452.dll.a
-dyslexia-eyetracking.exe: C:/opencv/x64/mingw/lib/libopencv_core452.dll.a
+dyslexia-eyetracking.exe: C:/opencv/x64/mingw/lib/libopencv_gapi453.dll.a
+dyslexia-eyetracking.exe: C:/opencv/x64/mingw/lib/libopencv_highgui453.dll.a
+dyslexia-eyetracking.exe: C:/opencv/x64/mingw/lib/libopencv_ml453.dll.a
+dyslexia-eyetracking.exe: C:/opencv/x64/mingw/lib/libopencv_objdetect453.dll.a
+dyslexia-eyetracking.exe: C:/opencv/x64/mingw/lib/libopencv_photo453.dll.a
+dyslexia-eyetracking.exe: C:/opencv/x64/mingw/lib/libopencv_stitching453.dll.a
+dyslexia-eyetracking.exe: C:/opencv/x64/mingw/lib/libopencv_video453.dll.a
+dyslexia-eyetracking.exe: C:/opencv/x64/mingw/lib/libopencv_videoio453.dll.a
+dyslexia-eyetracking.exe: C:/opencv/x64/mingw/lib/libopencv_dnn453.dll.a
+dyslexia-eyetracking.exe: C:/opencv/x64/mingw/lib/libopencv_imgcodecs453.dll.a
+dyslexia-eyetracking.exe: C:/opencv/x64/mingw/lib/libopencv_calib3d453.dll.a
+dyslexia-eyetracking.exe: C:/opencv/x64/mingw/lib/libopencv_features2d453.dll.a
+dyslexia-eyetracking.exe: C:/opencv/x64/mingw/lib/libopencv_flann453.dll.a
+dyslexia-eyetracking.exe: C:/opencv/x64/mingw/lib/libopencv_imgproc453.dll.a
+dyslexia-eyetracking.exe: C:/opencv/x64/mingw/lib/libopencv_core453.dll.a
 dyslexia-eyetracking.exe: CMakeFiles/dyslexia-eyetracking.dir/linklibs.rsp
 dyslexia-eyetracking.exe: CMakeFiles/dyslexia-eyetracking.dir/objects1.rsp
 dyslexia-eyetracking.exe: CMakeFiles/dyslexia-eyetracking.dir/link.txt

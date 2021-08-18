@@ -24,6 +24,7 @@ while(True):
     #         for i in range(frame.shape[2]):
     #             postFrame[y,x,i] = np.clip(frame[y,x,i] * contrast + brightness, 0, 255)
     pupil = cv2.inRange(gray, thresh-tolerance, thresh+tolerance, None)
+    integral = cv2.integral(gray, None, None)
     cv2.imshow('gray', gray)
     cv2.imshow('post process', postFrame)
     cv2.imshow('pupil', pupil)

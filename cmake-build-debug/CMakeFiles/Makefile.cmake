@@ -22,6 +22,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Users/Leon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/211.7142.21/bin/cmake/win/share/cmake-3.19/Modules/Compiler/GNU-C.cmake"
   "C:/Users/Leon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/211.7142.21/bin/cmake/win/share/cmake-3.19/Modules/Compiler/GNU-CXX.cmake"
   "C:/Users/Leon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/211.7142.21/bin/cmake/win/share/cmake-3.19/Modules/Compiler/GNU.cmake"
+  "C:/Users/Leon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/211.7142.21/bin/cmake/win/share/cmake-3.19/Modules/FindBoost.cmake"
   "C:/Users/Leon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/211.7142.21/bin/cmake/win/share/cmake-3.19/Modules/FindPackageHandleStandardArgs.cmake"
   "C:/Users/Leon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/211.7142.21/bin/cmake/win/share/cmake-3.19/Modules/FindPackageMessage.cmake"
   "C:/Users/Leon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/211.7142.21/bin/cmake/win/share/cmake-3.19/Modules/Platform/Windows-GNU-C-ABI.cmake"
@@ -33,6 +34,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Users/Leon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/211.7142.21/bin/cmake/win/share/cmake-3.19/Modules/Platform/Windows.cmake"
   "C:/Users/Leon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/211.7142.21/bin/cmake/win/share/cmake-3.19/Modules/Platform/WindowsPaths.cmake"
   "C:/Users/Leon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/211.7142.21/bin/cmake/win/share/cmake-3.19/Modules/ProcessorCount.cmake"
+  "C:/boost/lib/cmake/Boost-1.76.0/BoostConfig.cmake"
+  "C:/boost/lib/cmake/Boost-1.76.0/BoostConfigVersion.cmake"
+  "C:/boost/lib/cmake/boost_headers-1.76.0/boost_headers-config-version.cmake"
+  "C:/boost/lib/cmake/boost_headers-1.76.0/boost_headers-config.cmake"
   "C:/opencv/OpenCVConfig-version.cmake"
   "C:/opencv/OpenCVConfig.cmake"
   "C:/opencv/x64/mingw/lib/OpenCVConfig.cmake"
@@ -58,5 +63,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/pupiltracker.dir/DependInfo.cmake"
   "CMakeFiles/dyslexia-eyetracking.dir/DependInfo.cmake"
   )

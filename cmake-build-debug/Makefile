@@ -129,6 +129,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named pupiltracker
+
+# Build rule for target.
+pupiltracker: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 pupiltracker
+.PHONY : pupiltracker
+
+# fast build rule for target.
+pupiltracker/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pupiltracker.dir\build.make CMakeFiles/pupiltracker.dir/build
+.PHONY : pupiltracker/fast
+
+#=============================================================================
 # Target rules for targets named dyslexia-eyetracking
 
 # Build rule for target.
@@ -141,32 +154,113 @@ dyslexia-eyetracking/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\dyslexia-eyetracking.dir\build.make CMakeFiles/dyslexia-eyetracking.dir/build
 .PHONY : dyslexia-eyetracking/fast
 
-src/track-alpha.obj: src/track-alpha.cpp.obj
+src/lib/PupilTracker.obj: src/lib/PupilTracker.cpp.obj
 
-.PHONY : src/track-alpha.obj
+.PHONY : src/lib/PupilTracker.obj
 
 # target to build an object file
-src/track-alpha.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dyslexia-eyetracking.dir\build.make CMakeFiles/dyslexia-eyetracking.dir/src/track-alpha.cpp.obj
-.PHONY : src/track-alpha.cpp.obj
+src/lib/PupilTracker.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pupiltracker.dir\build.make CMakeFiles/pupiltracker.dir/src/lib/PupilTracker.cpp.obj
+.PHONY : src/lib/PupilTracker.cpp.obj
 
-src/track-alpha.i: src/track-alpha.cpp.i
+src/lib/PupilTracker.i: src/lib/PupilTracker.cpp.i
 
-.PHONY : src/track-alpha.i
+.PHONY : src/lib/PupilTracker.i
 
 # target to preprocess a source file
-src/track-alpha.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dyslexia-eyetracking.dir\build.make CMakeFiles/dyslexia-eyetracking.dir/src/track-alpha.cpp.i
-.PHONY : src/track-alpha.cpp.i
+src/lib/PupilTracker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pupiltracker.dir\build.make CMakeFiles/pupiltracker.dir/src/lib/PupilTracker.cpp.i
+.PHONY : src/lib/PupilTracker.cpp.i
 
-src/track-alpha.s: src/track-alpha.cpp.s
+src/lib/PupilTracker.s: src/lib/PupilTracker.cpp.s
 
-.PHONY : src/track-alpha.s
+.PHONY : src/lib/PupilTracker.s
 
 # target to generate assembly for a file
-src/track-alpha.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dyslexia-eyetracking.dir\build.make CMakeFiles/dyslexia-eyetracking.dir/src/track-alpha.cpp.s
-.PHONY : src/track-alpha.cpp.s
+src/lib/PupilTracker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pupiltracker.dir\build.make CMakeFiles/pupiltracker.dir/src/lib/PupilTracker.cpp.s
+.PHONY : src/lib/PupilTracker.cpp.s
+
+src/lib/cvx.obj: src/lib/cvx.cpp.obj
+
+.PHONY : src/lib/cvx.obj
+
+# target to build an object file
+src/lib/cvx.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pupiltracker.dir\build.make CMakeFiles/pupiltracker.dir/src/lib/cvx.cpp.obj
+.PHONY : src/lib/cvx.cpp.obj
+
+src/lib/cvx.i: src/lib/cvx.cpp.i
+
+.PHONY : src/lib/cvx.i
+
+# target to preprocess a source file
+src/lib/cvx.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pupiltracker.dir\build.make CMakeFiles/pupiltracker.dir/src/lib/cvx.cpp.i
+.PHONY : src/lib/cvx.cpp.i
+
+src/lib/cvx.s: src/lib/cvx.cpp.s
+
+.PHONY : src/lib/cvx.s
+
+# target to generate assembly for a file
+src/lib/cvx.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pupiltracker.dir\build.make CMakeFiles/pupiltracker.dir/src/lib/cvx.cpp.s
+.PHONY : src/lib/cvx.cpp.s
+
+src/lib/utils.obj: src/lib/utils.cpp.obj
+
+.PHONY : src/lib/utils.obj
+
+# target to build an object file
+src/lib/utils.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pupiltracker.dir\build.make CMakeFiles/pupiltracker.dir/src/lib/utils.cpp.obj
+.PHONY : src/lib/utils.cpp.obj
+
+src/lib/utils.i: src/lib/utils.cpp.i
+
+.PHONY : src/lib/utils.i
+
+# target to preprocess a source file
+src/lib/utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pupiltracker.dir\build.make CMakeFiles/pupiltracker.dir/src/lib/utils.cpp.i
+.PHONY : src/lib/utils.cpp.i
+
+src/lib/utils.s: src/lib/utils.cpp.s
+
+.PHONY : src/lib/utils.s
+
+# target to generate assembly for a file
+src/lib/utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pupiltracker.dir\build.make CMakeFiles/pupiltracker.dir/src/lib/utils.cpp.s
+.PHONY : src/lib/utils.cpp.s
+
+src/swirsky.obj: src/swirsky.cpp.obj
+
+.PHONY : src/swirsky.obj
+
+# target to build an object file
+src/swirsky.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dyslexia-eyetracking.dir\build.make CMakeFiles/dyslexia-eyetracking.dir/src/swirsky.cpp.obj
+.PHONY : src/swirsky.cpp.obj
+
+src/swirsky.i: src/swirsky.cpp.i
+
+.PHONY : src/swirsky.i
+
+# target to preprocess a source file
+src/swirsky.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dyslexia-eyetracking.dir\build.make CMakeFiles/dyslexia-eyetracking.dir/src/swirsky.cpp.i
+.PHONY : src/swirsky.cpp.i
+
+src/swirsky.s: src/swirsky.cpp.s
+
+.PHONY : src/swirsky.s
+
+# target to generate assembly for a file
+src/swirsky.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dyslexia-eyetracking.dir\build.make CMakeFiles/dyslexia-eyetracking.dir/src/swirsky.cpp.s
+.PHONY : src/swirsky.cpp.s
 
 # Help Target
 help:
@@ -177,9 +271,19 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... dyslexia-eyetracking
-	@echo ... src/track-alpha.obj
-	@echo ... src/track-alpha.i
-	@echo ... src/track-alpha.s
+	@echo ... pupiltracker
+	@echo ... src/lib/PupilTracker.obj
+	@echo ... src/lib/PupilTracker.i
+	@echo ... src/lib/PupilTracker.s
+	@echo ... src/lib/cvx.obj
+	@echo ... src/lib/cvx.i
+	@echo ... src/lib/cvx.s
+	@echo ... src/lib/utils.obj
+	@echo ... src/lib/utils.i
+	@echo ... src/lib/utils.s
+	@echo ... src/swirsky.obj
+	@echo ... src/swirsky.i
+	@echo ... src/swirsky.s
 .PHONY : help
 
 

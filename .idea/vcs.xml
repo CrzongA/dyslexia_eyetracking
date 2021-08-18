@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/hardware/pupil-geometry" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pupiltracker" vcs="Git" />
   </component>
 </project>

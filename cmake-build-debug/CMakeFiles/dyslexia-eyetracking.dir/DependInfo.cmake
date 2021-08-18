@@ -4,12 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "F:/LEONLAH/myprojects/dyslexia-eyetracking/src/track-alpha.cpp" "F:/LEONLAH/myprojects/dyslexia-eyetracking/cmake-build-debug/CMakeFiles/dyslexia-eyetracking.dir/src/track-alpha.cpp.obj"
+  "F:/LEONLAH/myprojects/dyslexia-eyetracking/src/swirsky.cpp" "F:/LEONLAH/myprojects/dyslexia-eyetracking/cmake-build-debug/CMakeFiles/dyslexia-eyetracking.dir/src/swirsky.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "C:/boost/include/boost-1_76"
+  "../src/include"
   "C:/opencv/include"
   )
 

@@ -1,10 +1,19 @@
 C:\Users\Leon\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\211.7142.21\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" F:\LEONLAH\myprojects\dyslexia-eyetracking
--- OpenCV ARCH: x64
--- OpenCV RUNTIME: mingw
--- OpenCV STATIC: OFF
--- Found OpenCV: C:/opencv (found version "4.5.2") 
--- Found OpenCV 4.5.2 in C:/opencv/x64/mingw/lib
--- You might need to add C:/opencv/x64/mingw/bin to your PATH to be able to run your applications.
--- Configuring done
--- Generating done
--- Build files have been written to: F:/LEONLAH/myprojects/dyslexia-eyetracking/cmake-build-debug
+CMake Error at CMakeLists.txt:8 (find_package):
+  By not providing "FindTBB.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "TBB", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "TBB" with any of
+  the following names:
+
+    TBBConfig.cmake
+    tbb-config.cmake
+
+  Add the installation prefix of "TBB" to CMAKE_PREFIX_PATH or set "TBB_DIR"
+  to a directory containing one of the above files.  If "TBB" provides a
+  separate development package or SDK, be sure it has been installed.
+
+
+-- Configuring incomplete, errors occurred!
+See also "F:/LEONLAH/myprojects/dyslexia-eyetracking/cmake-build-debug/CMakeFiles/CMakeOutput.log".
