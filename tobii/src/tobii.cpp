@@ -1,5 +1,6 @@
 #include <tobii/tobii.h>
 #include <tobii/tobii_streams.h>
+#include <iostream>
 #include <stdio.h>
 #include <assert.h>
 #include <string.h>
@@ -24,6 +25,8 @@ void url_receiver( char const* url, void* user_data )
 
 int main()
 {
+    std::cout << "shit"<< std::endl;
+    printf("test\n");
     // Create API
     tobii_api_t* api = NULL;
     tobii_error_t result = tobii_api_create( &api, NULL, NULL );

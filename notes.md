@@ -1,6 +1,9 @@
 
 # Notes
 
+### Papers
+- [Pupil labs tech report](https://arxiv.org/pdf/1405.0006.pdf)
+- [Swirski's algo](https://www.cl.cam.ac.uk/research/rainbow/projects/pupiltracking/files/Swirski,%20Bulling,%20Dodgson%20-%202012%20-%20Robust%20real-time%20pupil%20tracking%20in%20highly%20off-axis%20images.pdf)
 ### Excerpt from paper
 
 - "calibration process produces two different matrices for each eye."
@@ -19,11 +22,11 @@ we have a ***pupil and CR detection*** we measure the length and the angle of th
 - "A critical parameter of the eye tracking analysis is to identify and estimate the position and
 ***duration of fixations***. To constitute a fixation, gaze points have to remain within a window of size $d _{max}$ for
 at least $t _{min}$ .
-In our analysis, we empirically determined that **t min = 90ms and d max = 45pixels, corresponding to 1.5$^\text{o}$**, work well for identifying fixations across all participants"
+In our analysis, we empirically determined that **t min = 90ms and d max = 45pixels, corresponding to $1.5^\text{o}$**, work well for identifying fixations across all participants"
 - Dlib: face landmark library
 
 ### Resources & Open Source Repos
-- [open pupils lab](https://pupil-labs.com/products/core/) <em>This one's really useful</em> 
+- [pupil labs](https://pupil-labs.com/products/core/) <em>This one's really useful</em> 
     - https://docs.pupil-labs.com/core/diy/#getting-all-the-parts
     - https://www.shapeways.com/shops/pupil_store
 - [optikey](https://github.com/OptiKey/OptiKey/wiki)
@@ -66,7 +69,7 @@ In our analysis, we empirically determined that **t min = 90ms and d max = 45pix
     - RANSAC homography
 
 ### OpenCV
-
-#### functions
+Functions
 - ```cv.CascadeClassifier.detectMultiScale```
-  - return detected object's coordinates given a cascade classifier
+- return detected object's coordinates given a cascade classifier
+

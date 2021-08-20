@@ -1,4 +1,4 @@
 .vscode/
 build/
 cmake-build-debug/
-/pupiltracker/
+pupiltracker/
