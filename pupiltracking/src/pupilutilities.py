@@ -22,17 +22,21 @@ def getROI(src, roi, dst=None):
     y0 = 0
     y1 = src.shape[0]
     x1 = src.shape[1]
+    top = 0
+    bottom = 0
+    left = 0
+    right = 0
     if roi[0] < 0 or roi[1] < 0 or roi[2] > src.shape[0] or roi[3] > src.shape[1]:
         dst = copy.deepcopy(src)
         if roi[0] < 0:
-            y0 = -roi[0]
+            top = -roi[0]
         if roi[1] < 0:
-            x0 = -roi[1]
-        if roi[2] > src.shape[1]:
-            y1 = roi[2]
-        if roi[3] > src.shape[0]:
-            x1 = roi[3]
-        dst = cv.copyMakeBorder(dst, -y0, y1, -x0, x1, cv.BORDER_REPLICATE)
+            left = -roi[1]
+        if roi[2] > src.shape[0]:
+            bottom = roi[2] - src.shape[0]
+        if roi[3] > src.shape[1]:
+            right = roi[3] - src.shape[1]
+        dst = cv.copyMakeBorder(dst, top, bottom, left, right, cv.BORDER_REPLICATE)
     else: dst = src[y0:y1, x0:x1, :]
     return dst
         
@@ -63,8 +67,11 @@ def findPupilEllipse(img: np.ndarray, pupilParams, out):
         hf = HaarFeature(r_inner, r_outer, padding)
 
         # **unoptimized**
-        for i in range(0, (img.shape[0] - r - r -1)//ystep + 1, ((img.shape[0] - r - r - 1)//ystep + 1) // 8):
-            for y in range(i, r + i*ystep, ystep):
+        istep = ((img.shape[0] - r - r - 1)//ystep + 1) // 8
+        for i in range(0, (img.shape[0] - r - r -1)//ystep + 1, istep):
+            print((img.shape[0] - r - r -1)//ystep + 1)
+            for yi in range(0, istep):
+                y = r + i*ystep + ystep*yi
                 # original illustration of haar kernel and corresponding points, too good not to copy.
                 # row1_outer.|         |  p00._____________________.p01
                 #            |         |     |         Haar kernel |
@@ -86,7 +93,7 @@ def findPupilEllipse(img: np.ndarray, pupilParams, out):
                 p00_inner = upper_inner[r + padding - r_inner]
                 p01_inner = upper_inner[r + padding + r_inner + 1]
                 p10_inner = lower_inner[r + padding - r_inner]
-                p11_inner = lower_outer[r + padding + r_inner + 1]
+                p11_inner = lower_inner[r + padding + r_inner + 1]
 
                 p00_outer = upper_outer[r + padding - r_outer]
                 p01_outer = upper_outer[r + padding + r_outer + 1]
@@ -95,7 +102,7 @@ def findPupilEllipse(img: np.ndarray, pupilParams, out):
                 
                 for x in range(r, img.shape[1] - r, xstep):
                     sumInner = p00_inner + p11_inner - p01_inner - p10_inner
-                    sumOuter = p00_outer + p11_outer - p01_outer - p10_outer
+                    sumOuter = p00_outer + p11_outer - p01_outer - p10_outer - sumInner
 
                     response = hf.val_inner * sumInner + hf.val_outer * sumOuter
 
