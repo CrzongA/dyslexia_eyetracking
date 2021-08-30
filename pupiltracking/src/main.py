@@ -7,7 +7,7 @@ def nothing(x):
 cv2.namedWindow('parameters')
 cv2.createTrackbar('threshold', 'parameters', 0, 255, nothing)
 cv2.createTrackbar('range', 'parameters', 0, 100, nothing)
-cv2.createTrackbar('contrast', 'parameters', 10, 100, nothing)
+cv2.createTrackbar('contrast', 'parameters',    10, 100, nothing)
 cv2.createTrackbar('brightness', 'parameters', 0, 100, nothing)
 
 cap = cv2.VideoCapture(0)
