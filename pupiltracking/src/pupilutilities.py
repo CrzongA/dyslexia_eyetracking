@@ -6,10 +6,9 @@ import functools, copy
 SQRT_2 = np.sqrt(2)
 
 class HaarFeature:
-    def __init__(self, r1, r2, padding) -> None:
+    def __init__(self, r1, r2) -> None:
         self.r_inner = r1
         self.r_outer = r2
-        self.padding = padding
 
         count_inner = self.r_inner ** 2
         count_outer = self.r_outer ** 2 - self.r_inner ** 2
@@ -64,61 +63,58 @@ def findPupilEllipse(img: np.ndarray, pupilParams, out):
     for r in range(pupilParams.r_min, pupilParams.r_max, rstep):
         r_inner = r
         r_outer = 3*r
-        hf = HaarFeature(r_inner, r_outer, padding)
+        hf = HaarFeature(r_inner, r_outer)
 
         # **unoptimized**
         istep = ((img.shape[0] - r - r - 1)//ystep + 1) // 8
-        for i in range(0, (img.shape[0] - r - r -1)//ystep + 1, istep):
-            print((img.shape[0] - r - r -1)//ystep + 1)
-            for yi in range(0, istep):
-                y = r + i*ystep + ystep*yi
-                # original illustration of haar kernel and corresponding points, too good not to copy.
-                # row1_outer.|         |  p00._____________________.p01
-                #            |         |     |         Haar kernel |
-                #            |         |     |                     |
-                # row1_inner.|         |     |   p00._______.p01   |
-                #            |-padding-|     |      |       |      |
-                #            |         |     |      | (x,y) |      |
-                # row2_inner.|         |     |      |_______|      |
-                #            |         |     |   p10'       'p11   |
-                #            |         |     |                     |
-                # row2_outer.|         |     |_____________________|
-                #            |         |  p10'                     'p11
+        for y in range(0, (img.shape[0] - r - r -1)//ystep + 1, ystep):
+            # original illustration of haar kernel and corresponding points, too good not to copy.
+            # row1_outer.|         |  p00._____________________.p01
+            #            |         |     |         Haar kernel |
+            #            |         |     |                     |
+            # row1_inner.|         |     |   p00._______.p01   |
+            #            |-padding-|     |      |       |      |
+            #            |         |     |      | (x,y) |      |
+            # row2_inner.|         |     |      |_______|      |
+            #            |         |     |   p10'       'p11   |
+            #            |         |     |                     |
+            # row2_outer.|         |     |_____________________|
+            #            |         |  p10'                     'p11
 
-                upper_inner = integral[y + padding - r_inner]
-                lower_inner = integral[y + padding + r_inner + 1]
-                upper_outer = integral[y + padding - r_outer]
-                lower_outer = integral[y + padding + r_outer + 1]
+            upper_inner = integral[y + padding - r_inner]
+            lower_inner = integral[y + padding + r_inner + 1]
+            upper_outer = integral[y + padding - r_outer]
+            lower_outer = integral[y + padding + r_outer + 1]
 
-                p00_inner = upper_inner[r + padding - r_inner]
-                p01_inner = upper_inner[r + padding + r_inner + 1]
-                p10_inner = lower_inner[r + padding - r_inner]
-                p11_inner = lower_inner[r + padding + r_inner + 1]
+            p00_inner = upper_inner[r + padding - r_inner]
+            p01_inner = upper_inner[r + padding + r_inner + 1]
+            p10_inner = lower_inner[r + padding - r_inner]
+            p11_inner = lower_inner[r + padding + r_inner + 1]
 
-                p00_outer = upper_outer[r + padding - r_outer]
-                p01_outer = upper_outer[r + padding + r_outer + 1]
-                p10_outer = lower_outer[r + padding - r_outer]
-                p11_outer = lower_outer[r + padding + r_outer + 1]
+            p00_outer = upper_outer[r + padding - r_outer]
+            p01_outer = upper_outer[r + padding + r_outer + 1]
+            p10_outer = lower_outer[r + padding - r_outer]
+            p11_outer = lower_outer[r + padding + r_outer + 1]
+            
+            for x in range(r, img.shape[1] - r, xstep):
+                sumInner = p00_inner + p11_inner - p01_inner - p10_inner
+                sumOuter = p00_outer + p11_outer - p01_outer - p10_outer - sumInner
+
+                response = hf.val_inner * sumInner + hf.val_outer * sumOuter
+
+                if (response < minResponse):
+                    minValOut[0] = response
+                    minValOut[1] = (x, y)
                 
-                for x in range(r, img.shape[1] - r, xstep):
-                    sumInner = p00_inner + p11_inner - p01_inner - p10_inner
-                    sumOuter = p00_outer + p11_outer - p01_outer - p10_outer - sumInner
+                p00_inner += xstep
+                p01_inner += xstep
+                p10_inner += xstep
+                p11_inner += xstep
 
-                    response = hf.val_inner * sumInner + hf.val_outer * sumOuter
-
-                    if (response < minResponse):
-                        minValOut[0] = response
-                        minValOut[1] = (x, y)
-                    
-                    p00_inner += xstep
-                    p01_inner += xstep
-                    p10_inner += xstep
-                    p11_inner += xstep
-
-                    p00_outer += xstep
-                    p01_outer += xstep
-                    p10_outer += xstep
-                    p11_outer += xstep
+                p00_outer += xstep
+                p01_outer += xstep
+                p10_outer += xstep
+                p11_outer += xstep
         if (minValOut[0] < minResponse):
             minResponse = minValOut[0]
             pHaarPupil = minValOut[1]
@@ -126,7 +122,7 @@ def findPupilEllipse(img: np.ndarray, pupilParams, out):
     
     haarRadius = (int)(haarRadius * SQRT_2)
 
-    roiHaarPupil = (pHaarPupil[0]-r, pHaarPupil[1]-r, pHaarPupil[0]+r, pHaarPupil[1]+r) # y0 x0 y1 x1
+    roiHaarPupil = (pHaarPupil[1]-r, pHaarPupil[0]-r, pHaarPupil[1]+r, pHaarPupil[0]+r) # y0 x0 y1 x1
     mHaarPupil = getROI(img, roiHaarPupil)
 
     # calculate histogram of pupil
