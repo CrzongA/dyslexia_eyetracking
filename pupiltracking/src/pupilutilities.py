@@ -6,13 +6,13 @@ import functools, copy
 SQRT_2 = np.sqrt(2)
 
 class HaarFeature:
-    def __init__(self, r1, r2) -> None:
+    def __init__(self, r1, r2):
         self.r_inner = r1
         self.r_outer = r2
 
         count_inner = self.r_inner ** 2
         count_outer = self.r_outer ** 2 - self.r_inner ** 2
-        self.val_inner = 1.0 / (self.r_inner / self.r_outer)
+        self.val_inner = 1.0 / (self.r_inner ** 2)
         self.val_outer = -self.val_inner * count_inner / count_outer
 
 # roi: y0 x0 y1 x1
@@ -54,7 +54,7 @@ def findPupilEllipse(img: np.ndarray, pupilParams, out):
 
     minResponse = np.Infinity
     minValPoint = []
-    minValIn = [minResponse, minValPoint]
+    minValIn = [minResponse, minValPoint, 0]
     minValOut = copy.deepcopy(minValIn)
     pHaarPupil = ()
 
@@ -66,7 +66,6 @@ def findPupilEllipse(img: np.ndarray, pupilParams, out):
         hf = HaarFeature(r_inner, r_outer)
 
         # **unoptimized**
-        istep = ((img.shape[0] - r - r - 1)//ystep + 1) // 8
         for y in range(0, (img.shape[0] - r - r -1)//ystep + 1, ystep):
             # original illustration of haar kernel and corresponding points, too good not to copy.
             # row1_outer.|         |  p00._____________________.p01
@@ -118,7 +117,7 @@ def findPupilEllipse(img: np.ndarray, pupilParams, out):
         if (minValOut[0] < minResponse):
             minResponse = minValOut[0]
             pHaarPupil = minValOut[1]
-            haarRadius = r
+            minValOut[2] = haarRadius = r
     
     haarRadius = (int)(haarRadius * SQRT_2)
 
@@ -126,6 +125,9 @@ def findPupilEllipse(img: np.ndarray, pupilParams, out):
     mHaarPupil = getROI(img, roiHaarPupil)
 
     # calculate histogram of pupil
-    hist = cv.calcHist(mHaarPupil, [1], None, [256], (0, 256))
+    hist = cv.calcHist(mHaarPupil, [1], None, [256], (0, 256), accumulate=False)
 
     return (roiHaarPupil, mHaarPupil, hist, minValOut)
+
+
+def histKmeans(hist, bin_min, bin_max, K, init_centers, labels, termCriteria):
