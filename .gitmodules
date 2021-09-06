@@ -1,0 +1,3 @@
+[submodule "pupiltracker"]
+	path = pupiltracker
+	url = git@github.com:CrzongA/pupiltracker.git
