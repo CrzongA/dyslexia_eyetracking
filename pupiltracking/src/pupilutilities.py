@@ -66,7 +66,7 @@ def findPupilEllipse(img: np.ndarray, pupilParams, out):
         hf = HaarFeature(r_inner, r_outer)
 
         # **unoptimized**
-        for y in range(0, (img.shape[0] - r - r -1)//ystep + 1, ystep):
+        for y in range(r, (img.shape[0]- r -1), ystep):
             # original illustration of haar kernel and corresponding points, too good not to copy.
             # row1_outer.|         |  p00._____________________.p01
             #            |         |     |         Haar kernel |
@@ -95,7 +95,7 @@ def findPupilEllipse(img: np.ndarray, pupilParams, out):
             p10_outer = lower_outer[r + padding - r_outer]
             p11_outer = lower_outer[r + padding + r_outer + 1]
             
-            for x in range(r, img.shape[1] - r, xstep):
+            for x in range(r, img.shape[1] - r -1, xstep):
                 sumInner = p00_inner + p11_inner - p01_inner - p10_inner
                 sumOuter = p00_outer + p11_outer - p01_outer - p10_outer - sumInner
 
@@ -114,10 +114,13 @@ def findPupilEllipse(img: np.ndarray, pupilParams, out):
                 p01_outer += xstep
                 p10_outer += xstep
                 p11_outer += xstep
+                
         if (minValOut[0] < minResponse):
             minResponse = minValOut[0]
             pHaarPupil = minValOut[1]
             minValOut[2] = haarRadius = r
+        
+        del hf
     
     haarRadius = (int)(haarRadius * SQRT_2)
 
@@ -131,3 +134,4 @@ def findPupilEllipse(img: np.ndarray, pupilParams, out):
 
 
 def histKmeans(hist, bin_min, bin_max, K, init_centers, labels, termCriteria):
+    
